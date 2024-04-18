@@ -19,10 +19,6 @@
                 <form action="{{ route('register.custom') }}" method="POST">
                     @csrf
                     <div class="input-block mb-4">
-                        <label class="col-form-label">Name<span class="mandatory">*</span></label>
-                        <input class="form-control" type="text" name="name" value="{{ old('name') }}">
-                    </div>
-                    <div class="input-block mb-4">
                         <label class="col-form-label">Email<span class="mandatory">*</span></label>
                         <input class="form-control" type="text" value="{{ old('email') }}" id="email" name="email">
                         <div class="text-danger pt-2">
