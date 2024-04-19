@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\ActivityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,12 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('register', [CustomAuthController::class, 'register'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
+// Activity Management Routes
+Route::get('/activities', [ActivityController::class, 'index'])->name('activities.index');
+Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
+Route::put('/activities/{activity}', [ActivityController::class, 'update'])->name('activities.update');
+Route::delete('/activities/{activity}', [ActivityController::class, 'destroy'])->name('activities.destroy');
 
 
 Route::get('/', function () {
@@ -723,4 +730,5 @@ Route::get('/deals-details', function () {
 Route::get('/deals-kanban', function () {
     return view('deals-kanban');
 })->name('deals-kanban');
+
 
