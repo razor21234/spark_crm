@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\ActivityController' => $baseDir . '/app/Http/Controllers/ActivityController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\CustomAuthController' => $baseDir . '/app/Http/Controllers/CustomAuthController.php',
     'App\\Http\\Controllers\\RegistrationController' => $baseDir . '/app/Http/Controllers/RegistrationController.php',
@@ -40,6 +41,7 @@ return array(
     'App\\Livewire\\Select2TaskReports' => $baseDir . '/app/Livewire/Select2TaskReports.php',
     'App\\Livewire\\Select2UserReports' => $baseDir . '/app/Livewire/Select2UserReports.php',
     'App\\Livewire\\Select2Users' => $baseDir . '/app/Livewire/Select2Users.php',
+    'App\\Models\\Activity' => $baseDir . '/app/Models/Activity.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
